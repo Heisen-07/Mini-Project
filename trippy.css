@@ -1,0 +1,428 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-image: url('file:///C:/Users/vivek/Downloads/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color:#4f22cb;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition-duration:  0.5s;
+}
+
+header nav ul li a:hover {
+    color: #0c0503;
+    font-size: 30px;
+    border-style: dotted;
+    border-radius: 10px;
+    border-style: double;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('images/hero-bg.jpg') no-repeat center center / cover;
+    color: rgb(7, 1, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(31, 49, 214, 0.5);
+    padding: 2rem;
+    border-radius: 100px;
+    transition-duration:1s;
+}
+.hero-overlay:hover{
+    font-size: 20px;
+    border-radius: 10px;
+    
+    
+
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero button {
+    padding: 0.8rem 1.5rem;
+    background-color: #4f22cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #172ad4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+/* Interest Section */
+.interest-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.interest-card {
+    background: white;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: scale(1.05);
+}
+
+.interest-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.interest-card h3 {
+    font-size: 1.5rem;
+    color: #004d80;
+    margin: 0.5rem 0;
+}
+
+.interest-card p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    color: #666;
+}
+
+.interest-card button {
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    background-color: #a2bcf1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.interest-card button:hover {
+    background-color: #6523ac;
+    font-size: 20px;
+}
+
+/* General Card Hover Effect */
+.interest-card {
+    background: white;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Zoom Effect */
+.interest-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Text and Overlay Effect */
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition:0.3s ease;
+    border-radius: 8px;
+}
+
+.interest-card:hover::before {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Text Styling */
+.interest-card h3 {
+    font-size: 1.5rem;
+    color: #004d80;
+    margin: 0.5rem 0;
+    z-index: 2;
+    position: relative;
+}
+
+.interest-card:hover h3 {
+    color: #ffffff;
+}
+
+.interest-card p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    color: #666;
+    z-index: 2;
+    position: relative;
+}
+
+.interest-card:hover p {
+    color: #ffffff;
+}
+
+/* Button Styling */
+.interest-card button {
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    background-color: #ff704d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.interest-card:hover button {
+    background-color: #e65c33;
+    transform: scale(1.1);
+}
+
+
+/* Other Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #004d80;
+    color: white;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #ff704d;
+}
+
+/* Destinations Section */
+#destinations {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+#destinations h2 {
+    font-size: 2.5rem;
+    color: #004d80;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Card Container for Grid Layout */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Destination Cards */
+/* Base Card Styling */
+.card {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 400px;
+    height: 350px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Diagonal Overlay */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 77, 128, 0.8), rgba(255, 112, 77, 0.8));
+    clip-path: polygon(0 0, 100% 0, 0% 100%, 0% 0);
+    transition: clip-path 0.4s ease-in-out;
+    z-index: 1;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Image zooms in */
+}
+
+.card:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Overlay slides in */
+}
+
+/* Text Styling */
+.card h3, .card p {
+    position: relative;
+    margin: 10px 15px;
+    z-index: 2;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card:hover h3, .card:hover p {
+    opacity: 1;
+    transform: translateY(0); /* Text slides up into view */
+}
+
+#plans {
+    padding: 3rem 1rem;
+    background-color: #f0f8ff; /* Light blue background */
+    text-align: center;
+}
+
+#plans h2 {
+    font-size: 2.5rem;
+    color: #004d80;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+#plans form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#plans form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: bold;
+}
+
+#plans form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#plans form input:focus {
+    border-color: #004d80;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 77, 128, 0.2);
+}
+
+/* Button Styling */
+#plans form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff704d;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#plans form button:hover {
+    background-color: #e65c33;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #plans h2 {
+        font-size: 2rem;
+    }
+
+    #plans form {
+        padding: 1.5rem;
+    }
+
+    #plans form button {
+        font-size: 1rem;
+    }
+}

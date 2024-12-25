@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Trippy Site</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="video/airplane-flying.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Trippy Site</h1>
+        <nav>
+            <ul>
+                <li><a href="trippt.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="input-container">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Username</label>
+                    <span id="usernameError" class="error-message"></span>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                    <span id="passwordError" class="error-message"></span>
+                </div>
+
+                <button type="submit" id="loginBtn">Login</button>
+                <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Trippy Site. All rights reserved.</p>
+    </footer>
+</body>
+</html>
